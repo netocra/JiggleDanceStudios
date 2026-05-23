@@ -400,6 +400,106 @@
 
     .plan-items li::before { content: '✦'; color: var(--pink); font-size: 0.6rem; flex-shrink: 0; }
 
+/* PRODUCTOS */
+#productos { background: var(--off); }
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.producto-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(3,30,67,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255,102,196,0.15);
+}
+
+.producto-imagen {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.producto-card:hover .producto-imagen img {
+  transform: scale(1.05);
+}
+
+.producto-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--pink);
+  color: var(--navy);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.producto-contenido {
+  padding: 1.8rem;
+}
+
+.producto-nombre {
+  font-family: 'Chewy', cursive;
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.producto-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--navy-muted);
+  margin-bottom: 1.2rem;
+}
+
+.producto-precio {
+  font-family: 'Chewy', cursive;
+  font-size: 1.8rem;
+  color: var(--pink);
+  margin-bottom: 1.4rem;
+}
+
+.btn-producto {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: background 0.25s, transform 0.2s;
+  border: 2px solid var(--navy);
+}
+
+.btn-producto:hover {
+  background: var(--white);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
     /* CONTACTO */
     #contacto { background: var(--navy); }
     #contacto .section-label { color: var(--pink); }
